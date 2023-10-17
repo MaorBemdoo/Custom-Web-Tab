@@ -7,11 +7,21 @@ export const HeaderStyle = styled(Header)`
     justify-content: space-between;
     padding: .5em;
     & nav:first-child form{
+        display: flex;
+        align-items: center;
         &>input{
             border: none;
             outline: none;
+            width: 60px;
             background-color: transparent;
+            &::placeholder{
+                color: white;
+            }
         }
-        
+        & button{
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
     }
 `

@@ -6,8 +6,8 @@ const Header = ({className}) => {
     <header className={className}>
       <nav>
         <form target='_blank' action='https://google.com/search'>
-          <input type="search" name="q" id="q"/>
-          <SearchIcon />
+          <input type="search" placeholder="Search..." name="q" id="q"/>
+          <button><SearchIcon/></button>
         </form>
       </nav>
       <nav>
