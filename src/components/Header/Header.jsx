@@ -9,8 +9,8 @@ const Header = ({className}) => {
   return (
     <header className={className}>
       <nav className={active ? "active" : ""}>
-        <form target='_blank' action='https://google.com/search' onFocus={() => setActive(true)} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
-          <input type="search" placeholder="Search..." name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)}/>
+        <form target='_blank' action='https://google.com/search' onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
+          <input type="search" placeholder="Search..." name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive(true)}/>
           <button><SearchIcon/></button>
         </form>
       </nav>

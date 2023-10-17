@@ -9,11 +9,14 @@ export const HeaderStyle = styled(Header)`
     & nav:first-child form{
         display: flex;
         align-items: center;
+        width: 100px;
+        transition: all 500ms ease;
+        transform-origin: left;
         &>input{
             border: none;
             outline: none;
-            width: 60px;
             background-color: transparent;
+            width: 100%;
             &::placeholder{
                 color: white;
             }
@@ -32,12 +35,12 @@ export const HeaderStyle = styled(Header)`
         background-color: white;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: .5em;
         & *{
             color: black;
         }
         & input{
-            width: 100%;
             font-size: 1.1rem;
             &::placeholder{
                 color: gray;
