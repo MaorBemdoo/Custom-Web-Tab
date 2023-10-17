@@ -1,5 +1,5 @@
 import React from 'react'
-import {Search} from '@mui/icons-material'
+import {Search, WbCloudy} from '@mui/icons-material'
 import { useState } from 'react'
 
 const Header = ({className}) => {
@@ -16,7 +16,8 @@ const Header = ({className}) => {
       </nav>
       <nav>
         <div>
-
+          <WbCloudy/>
+          43&deg;C
         </div>
         <p>Mostly cloudy</p>
       </nav>
