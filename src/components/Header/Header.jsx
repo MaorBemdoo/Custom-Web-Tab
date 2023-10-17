@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search'
 const Header = ({className}) => {
   return (
     <header className={className}>
-      <nav>
+      <nav className='active'>
         <form target='_blank' action='https://google.com/search'>
           <input type="search" placeholder="Search..." name="q" id="q"/>
           <button><SearchIcon/></button>
