@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchIcon from '@mui/icons-material/Search'
+import {Search} from '@mui/icons-material'
 import { useState } from 'react'
 
 const Header = ({className}) => {
@@ -11,11 +11,14 @@ const Header = ({className}) => {
       <nav className={active ? "active" : ""}>
         <form target='_blank' action='https://google.com/search' onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
           <input type="search" placeholder="Search..." name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive(true)}/>
-          <button><SearchIcon/></button>
+          <button><Search/></button>
         </form>
       </nav>
       <nav>
+        <div>
 
+        </div>
+        <p>Mostly cloudy</p>
       </nav>
     </header>
   )
