@@ -57,6 +57,8 @@ export const HeaderStyle = styled(Header)`
         }
         & p{
             font-size: .8rem;
+            margin: 0;
+            padding-top: .1em;
         }
     }
 `
