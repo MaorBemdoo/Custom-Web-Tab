@@ -6,4 +6,12 @@ export const HeaderStyle = styled(Header)`
     align-items: center;
     justify-content: space-between;
     padding: .5em;
+    & nav:first-child form{
+        &>input{
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+        
+    }
 `

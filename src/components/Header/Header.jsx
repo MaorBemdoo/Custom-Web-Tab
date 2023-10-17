@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchIcon from '@mui/icons-material/Search'
 
 const Header = ({className}) => {
   return (
@@ -6,11 +7,11 @@ const Header = ({className}) => {
       <nav>
         <form target='_blank' action='https://google.com/search'>
           <input type="search" name="q" id="q"/>
-          <input type="submit"/>
+          <SearchIcon />
         </form>
       </nav>
       <nav>
-        
+
       </nav>
     </header>
   )
