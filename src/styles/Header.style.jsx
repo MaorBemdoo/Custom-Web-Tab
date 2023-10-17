@@ -3,7 +3,7 @@ import Header from "../components/Header/Header";
 
 export const HeaderStyle = styled(Header)`
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
     padding: .5em;
     & nav:first-child form{
@@ -45,6 +45,18 @@ export const HeaderStyle = styled(Header)`
             &::placeholder{
                 color: gray;
             }
+        }
+    }
+    & nav:last-child{
+        text-align: center;
+        & div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.3rem;
+        }
+        & p{
+            font-size: .8rem;
         }
     }
 `
