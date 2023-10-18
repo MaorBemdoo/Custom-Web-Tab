@@ -1,8 +1,8 @@
 import React from "react";
 
-function Main() {
+const Main = ({className}) => {
     return (
-        <main>
+        <main className={className}>
             <p>4:17<sub>PM</sub></p>
             <p>Good morning, Bem.</p>
         </main>
