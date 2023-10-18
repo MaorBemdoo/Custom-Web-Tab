@@ -16,6 +16,6 @@ export const MainStyle = styled(Main)`
         }
     }
     & p:nth-child(2){
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 `
