@@ -3,7 +3,7 @@ import React from "react";
 const Main = ({className}) => {
     return (
         <main className={className}>
-            <p>4:17<sub>PM</sub></p>
+            <p>4:17<sup>PM</sup></p>
             <p>Good morning, Bem.</p>
         </main>
     )
