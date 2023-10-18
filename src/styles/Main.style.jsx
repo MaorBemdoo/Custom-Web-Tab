@@ -18,4 +18,10 @@ export const MainStyle = styled(Main)`
     & p:nth-child(2){
         font-size: 2rem;
     }
+    .socialIcons{
+        padding: 3rem;
+        & a svg{
+            font-size: 2.4rem;
+        }
+    }
 `
