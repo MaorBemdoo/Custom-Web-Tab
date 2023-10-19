@@ -6,6 +6,7 @@ const Main = ({className}) => {
         <main className={className}>
             <p>4:17<sup>PM</sup></p>
             <p>Good morning, Bem.</p>
+            <p>Live life to the fullest</p>
             <div className="socialIcons">
                 <a href="https://github.com/MaorBemdoo"><GitHub sx={{fill: "black"}}/></a>
                 <a href="https://www.linkedin.com/in/bemdoo-maor-449698279/"><LinkedIn sx={{fill: "blue"}}/></a>
