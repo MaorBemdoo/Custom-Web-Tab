@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Footer = () => {
+const Footer = ({className}) => {
     return (
-        <footer>
-            <p>"Live is too short, make every moment count"</p>
+        <footer className={className}>
+            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, maxime voluptatum nostrum repellendus deleniti fuga "</p>
         </footer>
     )
 }
