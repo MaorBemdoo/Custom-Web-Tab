@@ -1,5 +1,5 @@
 import React from 'react'
-import {Search, WbCloudyOutlined} from '@mui/icons-material'
+import {AddCircleOutline, Search, WbCloudyOutlined} from '@mui/icons-material'
 import { useState } from 'react'
 
 const Header = ({className}) => {
@@ -25,6 +25,10 @@ const Header = ({className}) => {
           <input type="search" placeholder="Search..." name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive(true)}/>
           <button><Search/></button>
         </form>
+      </nav>
+      <nav>
+        <AddCircleOutline/>
+        menu
       </nav>
       <nav>
         <div>
