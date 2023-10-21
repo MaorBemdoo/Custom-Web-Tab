@@ -6,6 +6,7 @@ export const FooterStyle = styled(Footer)`
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0.5em;
     & p{
         width: 500px;
     }
