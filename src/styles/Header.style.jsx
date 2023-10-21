@@ -5,7 +5,7 @@ export const HeaderStyle = styled(Header)`
   display: flex;
   // align-items: center;
   justify-content: space-between;
-  /* height: 10vh; */
+  height: 30px;
   padding: 0.5em;
   & nav:first-child form {
     display: flex;
