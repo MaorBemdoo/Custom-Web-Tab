@@ -6,7 +6,7 @@ export const MainStyle = styled(Main)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    /* height: 80vh; */
     & p:first-child{
         font-size: 10rem;
         font-weight: 500;

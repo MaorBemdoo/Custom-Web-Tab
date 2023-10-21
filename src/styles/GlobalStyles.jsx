@@ -19,5 +19,8 @@ export const GlobalStyles = createGlobalStyle`
         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVTHzKee7eRDQGTQBdasMUoQQxJlryQJAlNA&usqp=CAU');
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 `
