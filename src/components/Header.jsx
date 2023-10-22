@@ -31,9 +31,9 @@ const Header = ({className}) => {
         <ul>
           <li><div>
             <a href='https://github.com/MaorBemdoo'><GitHub sx={{fill: "black"}}/></a>
-            <Twitter sx={{fill: "lightblue"}}/>
-            <LinkedIn sx={{fill: "blue"}}/>
-            <Mail sx={{fill: "red"}}/>
+            <a href='https://twitter.com/BemdooMaor'><Twitter sx={{fill: "lightblue"}}/></a>
+            <a href='https://www.linkedin.com/in/bemdoo-maor-449698279/'><LinkedIn sx={{fill: "blue"}}/></a>
+            <a href='https://mail.google.com/mail/u/0/#inbox'><Mail sx={{fill: "red"}}/></a>
           </div></li>
           <li><a href=''>Link1</a></li>
           <li><a href=''>Link2</a></li>
