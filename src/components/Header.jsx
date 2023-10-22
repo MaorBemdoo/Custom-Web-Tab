@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const Header = ({className}) => {
   const [searchInput, setSearchInput] = useState('')
-  const [active, setActive] = useState(false)
+  const [{activeNav1, activeNav2}, setActive] = useState({activeNav1: false, activeNav2: false})
 
   const emptyInputHan = (e) => {
     if(searchInput.trim() == ""){
@@ -14,20 +14,20 @@ const Header = ({className}) => {
   }
 
   const mouseE = () => {
-    setActive(true)
+    setActive({activeNav1: true, activeNav2})
     document.getElementById("q").focus()
   }
 
   return (
     <header className={className}>
-      <nav className={active ? "active" : ""}>
-        <form target='_blank' action='https://google.com/search' onMouseEnter={mouseE} onMouseLeave={() => setActive(false)} onSubmit={emptyInputHan}>
-          <input type="search" placeholder="Search..." name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive(true)}/>
+      <nav className={activeNav1 ? "activeNav1" : ""}>
+        <form target='_blank' action='https://google.com/search' onMouseEnter={mouseE} onMouseLeave={() => setActive({activeNav1: false, activeNav2})} onSubmit={emptyInputHan}>
+          <input type="search" placeholder="Search..." name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive({activeNav1: true, activeNav2})}/>
           <button><Search/></button>
         </form>
       </nav>
-      <nav>
-        <AddCircleOutline/>
+      <nav className={activeNav2 ? "activeNav2": ""}>
+        <AddCircleOutline onClick={() => setActive({activeNav1, activeNav2: !activeNav2})}/>
         <ul>
           <li><div>
             <a href='https://github.com/MaorBemdoo'><GitHub sx={{fill: "black"}}/></a>

@@ -29,7 +29,7 @@ export const HeaderStyle = styled(Header)`
       cursor: pointer;
     }
   }
-  & nav:first-child.active form {
+  & nav:first-child.activeNav1 form {
     width: 500px;
     height: 30px;
     border-radius: 6px;
@@ -59,6 +59,9 @@ export const HeaderStyle = styled(Header)`
       list-style: none;
       padding: 1em;
       border-radius: 4px;
+      transform: translateY(-50px);
+      visibility: hidden;
+      transition: all 500ms ease;
       & li{
         cursor: pointer;
         text-align: start;
@@ -77,6 +80,12 @@ export const HeaderStyle = styled(Header)`
       & *{
         color: black;
       }
+    }
+  }
+  & nav:nth-child(2).activeNav2{
+    & ul{
+      transform: translateY(0);
+      visibility: visible;
     }
   }
   & nav:last-child {
