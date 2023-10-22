@@ -48,6 +48,27 @@ export const HeaderStyle = styled(Header)`
       }
     }
   }
+  & nav:nth-child(2){
+    text-align: center;
+    & svg{
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    & ul{
+      background-color: white;
+      list-style: none;
+      padding: 1em;
+      border-radius: 4px;
+      & li{
+        cursor: pointer;
+        text-align: start;
+        margin-top: 1em;
+      }
+      & *{
+        color: black;
+      }
+    }
+  }
   & nav:last-child {
     text-align: center;
     & div {
