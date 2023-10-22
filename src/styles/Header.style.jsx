@@ -62,11 +62,13 @@ export const HeaderStyle = styled(Header)`
       & li{
         cursor: pointer;
         text-align: start;
-        margin-top: .5em;
-        padding: .4em;
         border-radius: 4px;
-        &:not(:first-child):hover{
-          background-color: #dad8d8;
+        &:not(:first-child){
+          padding: .4em;
+          margin-top: .5em;
+          &:hover{
+            background-color: #dad8d8;
+          }
         }
       }
       & *{

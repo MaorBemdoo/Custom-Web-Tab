@@ -30,7 +30,7 @@ const Header = ({className}) => {
         <AddCircleOutline/>
         <ul>
           <li><div>
-            <GitHub sx={{fill: "black"}}/>
+            <a href='https://github.com/MaorBemdoo'><GitHub sx={{fill: "black"}}/></a>
             <Twitter sx={{fill: "lightblue"}}/>
             <LinkedIn sx={{fill: "blue"}}/>
             <Mail sx={{fill: "red"}}/>
