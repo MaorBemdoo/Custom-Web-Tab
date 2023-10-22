@@ -1,6 +1,7 @@
 import React from 'react'
 import {AddCircleOutline, Search, WbCloudyOutlined} from '@mui/icons-material'
 import { useState } from 'react'
+import { Menu, MenuItem } from '@mui/material'
 
 const Header = ({className}) => {
   const [searchInput, setSearchInput] = useState('')
@@ -28,7 +29,12 @@ const Header = ({className}) => {
       </nav>
       <nav>
         <AddCircleOutline/>
-        menu
+        <Menu id="menu" anchorEl={<div>Hey niga</div>} keepMounted open={true}>
+          <MenuItem>Hey</MenuItem>
+          <MenuItem>Hafa</MenuItem>
+          <MenuItem>Bro</MenuItem>
+          <MenuItem>Yo fan bread dey</MenuItem>
+        </Menu>
       </nav>
       <nav>
         <div>
