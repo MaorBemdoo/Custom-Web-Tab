@@ -60,7 +60,9 @@ export const HeaderStyle = styled(Header)`
       padding: 1em;
       border-radius: 4px;
       transform: translateY(-50px);
-      visibility: hidden;
+      opacity: 0;
+      user-select: none;
+      pointer-events: none;
       transition: all 500ms ease;
       & li{
         cursor: pointer;
@@ -85,7 +87,9 @@ export const HeaderStyle = styled(Header)`
   & nav:nth-child(2).activeNav2{
     & ul{
       transform: translateY(0);
-      visibility: visible;
+      opacity: 1;
+      user-select: all;
+      pointer-events: all;
     }
   }
   & nav:last-child {
