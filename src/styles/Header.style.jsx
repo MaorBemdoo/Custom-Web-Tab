@@ -82,6 +82,10 @@ export const HeaderStyle = styled(Header)`
         &:not(:first-child){
           border-radius: 4px;
           /* padding: .4em; */
+          & a{
+            display: block;
+            width: 100%;
+          }
           &:hover{
             background-color: #f1f1f1;
           }
@@ -96,7 +100,7 @@ export const HeaderStyle = styled(Header)`
     & ul{
       transform: translateY(0);
       opacity: 1;
-      user-select: all;
+      user-select: auto;
       pointer-events: all;
     }
   }
