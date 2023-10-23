@@ -67,8 +67,8 @@ export const HeaderStyle = styled(Header)`
       & li{
         cursor: pointer;
         text-align: start;
-        padding: .6em;
         &:first-child{
+          padding: .6em;
           border-bottom: 1px solid #c7c7c7;
           margin-bottom: .4em;
           & div{
@@ -87,7 +87,8 @@ export const HeaderStyle = styled(Header)`
           /* padding: .4em; */
           & a{
             display: block;
-            width: 100%;
+            /* width: 100%; */
+            padding: .6em;
           }
           &:hover{
             background-color: #f1f1f1;
