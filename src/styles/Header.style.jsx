@@ -80,7 +80,7 @@ export const HeaderStyle = styled(Header)`
           margin-top: .4em;
         }
         &:last-child{
-          margin-bottom: .4em;
+          border-bottom: .4em white solid;
         }
         &:not(:first-child){
           border-radius: 4px;
