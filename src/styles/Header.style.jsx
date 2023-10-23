@@ -79,6 +79,9 @@ export const HeaderStyle = styled(Header)`
         &:nth-child(2){
           margin-top: .4em;
         }
+        &:last-child{
+          margin-bottom: .4em;
+        }
         &:not(:first-child){
           border-radius: 4px;
           /* padding: .4em; */
