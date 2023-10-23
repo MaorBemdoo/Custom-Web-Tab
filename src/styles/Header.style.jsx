@@ -57,7 +57,7 @@ export const HeaderStyle = styled(Header)`
     & ul{
       background-color: white;
       list-style: none;
-      padding: 1em;
+      /* padding: 1em; */
       border-radius: 4px;
       transform: translateY(-50px);
       opacity: 0;
@@ -67,13 +67,17 @@ export const HeaderStyle = styled(Header)`
       & li{
         cursor: pointer;
         text-align: start;
+        padding: .6em;
         &:first-child{
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #c7c7c7;
+          margin-bottom: .4em;
+        }
+        &:nth-child(2){
+          margin-top: .4em;
         }
         &:not(:first-child){
           border-radius: 4px;
-          padding: .4em;
-          margin-top: .5em;
+          /* padding: .4em; */
           &:hover{
             background-color: #f1f1f1;
           }
