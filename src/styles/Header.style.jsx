@@ -71,6 +71,10 @@ export const HeaderStyle = styled(Header)`
         &:first-child{
           border-bottom: 1px solid #c7c7c7;
           margin-bottom: .4em;
+          & div{
+            display: flex;
+            gap: .4em;
+          }
         }
         &:nth-child(2){
           margin-top: .4em;
