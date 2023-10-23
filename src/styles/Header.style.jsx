@@ -73,7 +73,7 @@ export const HeaderStyle = styled(Header)`
           padding: .4em;
           margin-top: .5em;
           &:hover{
-            background-color: #dad8d8;
+            background-color: #f1f1f1;
           }
         }
       }
