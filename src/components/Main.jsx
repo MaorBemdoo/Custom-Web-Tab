@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment"
 import { useState, useEffect } from "react";
+import { jsx } from "@emotion/react";
 
 const MAEhandler = (hour) => {
     if(hour < 12){
@@ -13,6 +14,13 @@ const MAEhandler = (hour) => {
 }
 
 const Main = ({className}) => {
+
+    const [second, setSecond] = useState(moment().second())
+
+    setInterval(() => {
+        setSecond(moment().second())
+    }, 1000);
+
     return (
         <main className={className}>
             <p>{moment().hour() > 12 ? moment().hour()-12 : moment().hour() == 0 ? 12 : moment().hour()}:{moment().minute() < 10 ? "0" + moment().minute() : moment().minute()}<sup>{moment().format("A")}</sup></p>
