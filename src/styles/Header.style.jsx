@@ -126,6 +126,9 @@ export const HeaderStyle = styled(Header)`
     & {
       flex-direction: column;
       align-items: center;
+      & nav:first-child.activeNav1 form{
+        width: 100%;
+      }
       & nav:nth-child(2){
         margin-top: 1em;
       }
