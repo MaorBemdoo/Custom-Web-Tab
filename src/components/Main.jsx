@@ -15,17 +15,22 @@ const MAEhandler = (hour) => {
 
 const Main = ({className}) => {
 
-    const [second, setSecond] = useState(moment().second())
+    const [time, setTime] = useState(moment())
 
-    setInterval(() => {
-        setSecond(moment().second())
-    }, 1000);
+    useEffect(() => {
+        const intervalID = setInterval(() => {
+            setTime(moment());
+        }, 1000);
+    
+        // Cleanup the interval on component unmount
+        return () => clearInterval(intervalID);
+    }, []);
 
     return (
         <main className={className}>
-            <p>{moment().hour() > 12 ? moment().hour()-12 : moment().hour() == 0 ? 12 : moment().hour()}:{moment().minute() < 10 ? "0" + moment().minute() : moment().minute()}<sup>{moment().format("A")}</sup></p>
-            <p>{moment().format("dddd")}, {moment().format("D") + " " + moment().format("MMMM")}, {moment().format("YYYY")}</p>
-            <p>Good {MAEhandler(moment().hour())}, Bem.</p>
+            <p>{time.hour() > 12 ? time.hour()-12 : time.hour() == 0 ? 12 : time.hour()}:{time.minute() < 10 ? "0" + time.minute() : time.minute()}<sup>{time.format("A")}</sup></p>
+            <p>{time.format("dddd")}, {time.format("D") + " " + time.format("MMMM")}, {time.format("YYYY")}</p>
+            <p>Good {MAEhandler(time.hour())}, Bem.</p>
         </main>
     )
 }

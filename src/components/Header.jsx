@@ -1,6 +1,7 @@
 import React from 'react'
 import {AddCircleOutline, Search, WbCloudyOutlined, GitHub, Twitter, LinkedIn, Mail} from '@mui/icons-material'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from "axios"
 
 const Header = ({className}) => {
   const [searchInput, setSearchInput] = useState('')
@@ -42,7 +43,27 @@ const Header = ({className}) => {
       <nav>
         <div>
           <WbCloudyOutlined/>
-          43&deg;C
+          {
+              useEffect(() => {
+                const options = {
+                  method: 'GET',
+                  url: 'https://api.openweathermap.org/data/2.5/weather',
+                  params: {
+                            q: 'Abuja',
+                            appid: 'e57e805d2df3972b41f79017285ea712',
+                            units: 'metric'
+                          },
+                };
+                axios.request(options)
+                  .then(res => {
+                    console.log(res.data.main.temp);
+
+                  })
+                  .catch(err => {
+                    console.error(err);
+                  })
+                }, [])
+          }&deg;C
         </div>
         <p>Mostly cloudy</p>
       </nav>
