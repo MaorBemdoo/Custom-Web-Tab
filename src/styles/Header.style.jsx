@@ -30,7 +30,7 @@ export const HeaderStyle = styled(Header)`
     }
   }
   & nav:first-child.activeNav1 form {
-    width: 500px;
+    width: 40vw;
     height: 30px;
     border-radius: 6px;
     background-color: white;
