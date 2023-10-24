@@ -122,4 +122,16 @@ export const HeaderStyle = styled(Header)`
       padding-top: 0.1em;
     }
   }
+  @media (max-width: 470px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+      & nav:nth-child(2){
+        margin-top: 1em;
+      }
+      & nav:last-child{
+        margin-top: -8em;
+      }
+    }
+  }
 `;
