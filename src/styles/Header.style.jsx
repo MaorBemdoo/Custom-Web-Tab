@@ -120,6 +120,7 @@ export const HeaderStyle = styled(Header)`
       font-size: 0.8rem;
       margin: 0;
       padding-top: 0.1em;
+      text-transform: capitalize;
     }
   }
   @media (max-width: 470px) {
