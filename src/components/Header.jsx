@@ -66,7 +66,7 @@ useEffect(() => {
       .catch(err => {
         console.error(err);
       })
-    testFunc(options)
+    // testFunc(options)
   }
 }, [position])
 
