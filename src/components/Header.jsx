@@ -52,6 +52,13 @@ useEffect(() => {
                 units: 'metric'
               },
     };
+    const testFunc = (options) => {
+      const link = document.createElement("a")
+      link.href = `https://api.openweathermap.org/data/2.5/weather?lat=${options.params.lat}&lon=${options.params.lon}&units=${options.params.units}&appid=${options.params.appid}`
+      link.target = "_blank"
+      link.click()
+    }
+    testFunc(options)
     axios.request(options)
       .then(res => {
         console.log(res.data);
