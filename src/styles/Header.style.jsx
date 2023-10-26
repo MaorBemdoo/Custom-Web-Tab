@@ -115,6 +115,10 @@ export const HeaderStyle = styled(Header)`
       align-items: center;
       justify-content: space-between;
       font-size: 1.3rem;
+      & img{
+        width: 30px;
+        height: 30px;
+      }
     }
     & p {
       font-size: 0.8rem;
