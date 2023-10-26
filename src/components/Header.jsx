@@ -7,6 +7,7 @@ const Header = ({className}) => {
   const [searchInput, setSearchInput] = useState('')
   const [{activeNav1, activeNav2}, setActive] = useState({activeNav1: false, activeNav2: false})
   const [weather, setWeather] = useState(null)
+  const [position, setPosition] = useState(null)
 
   const emptyInputHan = (e) => {
     if(searchInput.trim() == ""){
@@ -20,12 +21,33 @@ const Header = ({className}) => {
     document.getElementById("q").focus()
   }
 
-  useEffect(() => {
+useEffect(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          // Extract the latitude and longitude from the position object
+          setPosition({
+            lat: pos.coords.latitude,
+            lon: pos.coords.longitude
+          });
+        },
+        (err) => {
+          console.log(err.message);
+        }
+      )
+    } else{
+      console.log("Your browser does not have geolocation");
+    }
+}, [])
+
+useEffect(() => {
+  if (position !== null){
     const options = {
       method: 'GET',
       url: 'https://api.openweathermap.org/data/2.5/weather',
       params: {
-                q: 'Abuja',
+                lat: position.lat,
+                lon: position.lon,
                 appid: 'e57e805d2df3972b41f79017285ea712',
                 units: 'metric'
               },
@@ -38,7 +60,8 @@ const Header = ({className}) => {
       .catch(err => {
         console.error(err);
       })
-    }, [])
+  }
+}, [position])
 
   return (
     <>
