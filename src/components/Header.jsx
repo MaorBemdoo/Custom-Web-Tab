@@ -58,7 +58,6 @@ useEffect(() => {
       link.target = "_blank"
       link.click()
     }
-    testFunc(options)
     axios.request(options)
       .then(res => {
         console.log(res.data);
@@ -67,6 +66,7 @@ useEffect(() => {
       .catch(err => {
         console.error(err);
       })
+    testFunc(options)
   }
 }, [position])
 
