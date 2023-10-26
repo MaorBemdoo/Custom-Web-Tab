@@ -1,9 +1,13 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 
 const Footer = ({className}) => {
+
+    const [quote, setQuote] = useState('')
+
     return (
         <footer className={className}>
-            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, maxime voluptatum nostrum repellendus deleniti fuga "</p>
+            <p>{quote}</p>
         </footer>
     )
 }
