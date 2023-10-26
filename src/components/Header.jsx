@@ -94,7 +94,7 @@ useEffect(() => {
         </nav>
         <nav>
           <div>
-            <WbCloudyOutlined/>
+            <img src={weather && `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].main}/>
             {weather && Math.round(weather.main.temp)}&deg;C
           </div>
           <p>{weather && weather.weather[0].description}</p>
