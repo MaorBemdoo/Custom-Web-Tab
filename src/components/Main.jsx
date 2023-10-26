@@ -3,6 +3,18 @@ import moment from "moment"
 import { useState, useEffect } from "react";
 import { jsx } from "@emotion/react";
 
+const ThHandler = (date) => {
+    if(date == 1){
+        return "st"
+    } else if(date == 2){
+        return "nd"
+    } else if(date == 3){
+        return "rd"
+    } else{
+        return "th"
+    }
+}
+
 const MAEhandler = (hour) => {
     if(hour < 12){
         return "morning"
@@ -29,7 +41,7 @@ const Main = ({className}) => {
     return (
         <main className={className}>
             <p>{time.hour() > 12 ? time.hour()-12 : time.hour() == 0 ? 12 : time.hour()}:{time.minute() < 10 ? "0" + time.minute() : time.minute()}<sup>{time.format("A")}</sup></p>
-            <p>{time.format("dddd")}, {time.format("D") + " " + time.format("MMMM")}, {time.format("YYYY")}</p>
+            <p>{time.format("dddd")}, {time.format("D") + ThHandler(time.format("D")) + " " + time.format("MMMM")}, {time.format("YYYY")}</p>
             <p>Good {MAEhandler(time.hour())}, Bem.</p>
         </main>
     )
