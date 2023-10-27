@@ -1,5 +1,5 @@
 import React from 'react'
-import {AddCircleOutline, Search, WbCloudyOutlined, GitHub, Twitter, LinkedIn, Mail} from '@mui/icons-material'
+import {AddCircleOutline, Search, GitHub, Twitter, LinkedIn, Mail} from '@mui/icons-material'
 import { useState, useEffect } from 'react'
 import axios from "axios"
 
