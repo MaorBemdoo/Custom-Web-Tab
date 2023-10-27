@@ -57,7 +57,7 @@ export const HeaderStyle = styled(Header)`
     & ul{
       background-color: white;
       list-style: none;
-      /* padding: 1em; */
+      padding: .3em;
       border-radius: 4px;
       transform: translateY(-50px);
       opacity: 0;
@@ -71,6 +71,7 @@ export const HeaderStyle = styled(Header)`
           padding: .6em;
           border-bottom: 1px solid #c7c7c7;
           margin-bottom: .4em;
+          align-items: center;
           & div{
             display: flex;
             gap: .4em;
