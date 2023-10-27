@@ -22,54 +22,54 @@ const Header = ({className}) => {
     document.getElementById("q").focus()
   }
 
-useEffect(() => {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          // Extract the latitude and longitude from the position object
-          setPosition({
-            lat: pos.coords.latitude,
-            lon: pos.coords.longitude
-          });
-        },
-        (err) => {
-          console.log(err.message);
-        }
-      )
-    } else{
-      console.log("Your browser does not have geolocation");
-    }
-}, [])
+  useEffect(() => {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            // Extract the latitude and longitude from the position object
+            setPosition({
+              lat: pos.coords.latitude,
+              lon: pos.coords.longitude
+            });
+          },
+          (err) => {
+            console.log(err.message);
+          }
+        )
+      } else{
+        console.log("Your browser does not have geolocation");
+      }
+  }, [])
 
-useEffect(() => {
-  if (position !== null){
-    const options = {
-      method: 'GET',
-      url: 'https://api.openweathermap.org/data/2.5/weather',
-      params: {
-                lat: position.lat,
-                lon: position.lon,
-                appid: 'e57e805d2df3972b41f79017285ea712',
-                units: 'metric'
-              },
-    };
-    const testFunc = (options) => {
-      const link = document.createElement("a")
-      link.href = `https://api.openweathermap.org/data/2.5/weather?lat=${options.params.lat}&lon=${options.params.lon}&units=${options.params.units}&appid=${options.params.appid}`
-      link.target = "_blank"
-      link.click()
+  useEffect(() => {
+    if (position !== null){
+      const options = {
+        method: 'GET',
+        url: 'https://api.openweathermap.org/data/2.5/weather',
+        params: {
+                  lat: position.lat,
+                  lon: position.lon,
+                  appid: 'e57e805d2df3972b41f79017285ea712',
+                  units: 'metric'
+                },
+      };
+      const testFunc = (options) => {
+        const link = document.createElement("a")
+        link.href = `https://api.openweathermap.org/data/2.5/weather?lat=${options.params.lat}&lon=${options.params.lon}&units=${options.params.units}&appid=${options.params.appid}`
+        link.target = "_blank"
+        link.click()
+      }
+      axios.request(options)
+        .then(res => {
+          console.log(res.data);
+          setWeather(res.data)
+        })
+        .catch(err => {
+          console.error(err);
+        })
+      // testFunc(options)
     }
-    axios.request(options)
-      .then(res => {
-        console.log(res.data);
-        setWeather(res.data)
-      })
-      .catch(err => {
-        console.error(err);
-      })
-    // testFunc(options)
-  }
-}, [position])
+  }, [position])
 
   return (
     <>
