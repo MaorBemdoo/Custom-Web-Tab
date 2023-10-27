@@ -9,6 +9,9 @@ const Header = ({className}) => {
   const [weather, setWeather] = useState(null)
   const [position, setPosition] = useState(null)
   const [placeholder, setPlaceholder] = useState("Search...")
+  const placeholders = [
+    "Richest person in the world", "Latest news", "Netnaija", "Best footballer", "Highest paid coding jobs", "ChatGPT", "Bemdoo Maor"
+  ]
 
   const emptyInputHan = (e) => {
     if(searchInput.trim() == ""){
@@ -70,6 +73,14 @@ const Header = ({className}) => {
       // testFunc(options)
     }
   }, [position])
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const randomidx = Math.floor(Math.random() * placeholders.length)
+      setPlaceholder(placeholders[randomidx])
+    }, 10000);
+    return () => clearInterval(intervalId)
+  }, [])
 
   return (
     <>
