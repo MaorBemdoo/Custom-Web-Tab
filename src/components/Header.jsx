@@ -10,7 +10,7 @@ const Header = ({className}) => {
   const [position, setPosition] = useState(null)
   const [placeholder, setPlaceholder] = useState("Search...")
   const placeholders = [
-    "Richest person in the world", "Latest news", "Netnaija", "Best footballer", "Highest paid coding jobs", "ChatGPT", "Bemdoo Maor"
+    "Richest person in the world", "Latest news", "Netnaija", "Best footballer", "Highest paid coding jobs", "ChatGPT", "Bemdoo Maor", "Search..."
   ]
 
   const emptyInputHan = (e) => {
