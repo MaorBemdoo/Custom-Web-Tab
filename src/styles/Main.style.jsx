@@ -7,6 +7,9 @@ export const MainStyle = styled(Main)`
     justify-content: center;
     align-items: center;
     /* height: 80vh; */
+    & p{
+        text-align: center;
+    }
     & p:first-child{
         font-size: 10rem;
         font-weight: 500;
@@ -20,11 +23,5 @@ export const MainStyle = styled(Main)`
     }
     & p:nth-child(3){
         font-size: 2.4rem;
-    }
-    .socialIcons{
-        padding: 3rem;
-        & a svg{
-            font-size: 2.4rem;
-        }
     }
 `
