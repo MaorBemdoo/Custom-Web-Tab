@@ -71,9 +71,10 @@ export const HeaderStyle = styled(Header)`
           padding: .6em;
           border-bottom: 1px solid #c7c7c7;
           margin-bottom: .4em;
-          align-items: center;
           & div{
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: .4em;
           }
         }
