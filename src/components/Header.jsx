@@ -8,6 +8,7 @@ const Header = ({className}) => {
   const [{activeNav1, activeNav2}, setActive] = useState({activeNav1: false, activeNav2: false})
   const [weather, setWeather] = useState(null)
   const [position, setPosition] = useState(null)
+  const [placeholder, setPlaceholder] = useState("Search...")
 
   const emptyInputHan = (e) => {
     if(searchInput.trim() == ""){
@@ -75,7 +76,7 @@ useEffect(() => {
       <header className={className}>
         <nav className={activeNav1 ? "activeNav1" : ""}>
           <form action='https://google.com/search' onMouseEnter={mouseE} onMouseLeave={() => setActive({activeNav1: false, activeNav2})} onSubmit={emptyInputHan}>
-            <input type="search" placeholder="Search..." name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive({activeNav1: true, activeNav2})}/>
+            <input type="search" placeholder={placeholder} name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive({activeNav1: true, activeNav2})}/>
             <button><Search/></button>
           </form>
         </nav>
