@@ -81,7 +81,7 @@ const Header = ({className}) => {
         setPlaceholder(randomPlaceholder)
       } else{
         if(placeholder.length >= 7){
-          setPlaceholder(randomPlaceholder.slice(0, 7) + "...")
+          setPlaceholder(randomPlaceholder.slice(0, 7).trim() + "...")
         }
       }
     }, 10000);
