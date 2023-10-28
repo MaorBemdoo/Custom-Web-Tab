@@ -1,6 +1,6 @@
 import React from 'react'
 import {AddCircleOutline, Search, GitHub, Twitter, LinkedIn, Mail} from '@mui/icons-material'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import axios from "axios"
 
 const Header = ({className}) => {
@@ -77,10 +77,17 @@ const Header = ({className}) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       const randomidx = Math.floor(Math.random() * placeholders.length)
-      setPlaceholder(placeholders[randomidx])
+      const randomPlaceholder = placeholders[randomidx]
+      if(activeNav1){
+        setPlaceholder(randomPlaceholder)
+      } else{
+        if(placeholder.length >= 7){
+          setPlaceholder(randomPlaceholder.slice(0, 7) + "...")
+        }
+      }
     }, 10000);
     return () => clearInterval(intervalId)
-  }, [])
+  }, [activeNav1])
 
   return (
     <>
