@@ -16,6 +16,7 @@ A customized new web tab to replace the regular old browser new tab.
 - CSS3
 - CSS flex
 - openweather api
+- Axios
 
 ## Why I used the Tech Stack
 
@@ -48,7 +49,7 @@ I used the tech stack above to make my react project simple
     <img src="src/assets/mobileScreenshots.jpg" alt="Mobile Screenshot">
 </div>
 
-**[Demo Link](https://bemdoom-notesapp.netlify.app)**
+**[Demo Link]()**
 
 ## Author
 
