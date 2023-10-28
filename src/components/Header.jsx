@@ -17,7 +17,6 @@ const Header = ({className}) => {
     if(searchInput.trim() == ""){
       e.preventDefault()
     };
-    setSearchInput('')
   }
 
   const mouseE = () => {
