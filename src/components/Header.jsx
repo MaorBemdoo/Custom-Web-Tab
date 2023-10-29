@@ -24,6 +24,11 @@ const Header = ({className}) => {
     document.getElementById("q").focus()
   }
 
+  const focusHandler = () => {
+    setActive({activeNav1: true, activeNav2})
+    // document.querySelector("form").removeEventListener("mouseleave", () => setActive({activeNav1: false, activeNav2}))
+  }
+
   useEffect(() => {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
@@ -77,14 +82,21 @@ const Header = ({className}) => {
     const intervalId = setInterval(() => {
       const randomidx = Math.floor(Math.random() * placeholders.length)
       const randomPlaceholder = placeholders[randomidx]
-      if(activeNav1){
+      // if(activeNav1){
         setPlaceholder(randomPlaceholder)
-      } else{
-        if(placeholder.length >= 7){
-          setPlaceholder(randomPlaceholder.slice(0, 7).trim() + "...")
-        }
-      }
-    }, 10000);
+      // } else{
+        // if(placeholder.length >= 7){
+          // setPlaceholder(randomPlaceholder.slice(0, 7).trim() + "...")
+        // }
+      // }
+    }, 2000);
+
+    if(!activeNav1 && placeholder.length >= 7){
+      setPlaceholder(placeholder.slice(0, 7).trim() + "...")
+    } else{
+      return;
+    }
+
     return () => clearInterval(intervalId)
   }, [activeNav1])
 
@@ -93,7 +105,7 @@ const Header = ({className}) => {
       <header className={className}>
         <nav className={activeNav1 ? "activeNav1" : ""}>
           <form action='https://google.com/search' onMouseEnter={mouseE} onMouseLeave={() => setActive({activeNav1: false, activeNav2})} onSubmit={emptyInputHan}>
-            <input type="search" placeholder={placeholder} name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={() => setActive({activeNav1: true, activeNav2})}/>
+            <input type="search" placeholder={placeholder} name="q" id="q" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} onFocus={focusHandler}/>
             <button><Search/></button>
           </form>
         </nav>
