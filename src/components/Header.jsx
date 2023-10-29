@@ -82,21 +82,14 @@ const Header = ({className}) => {
     const intervalId = setInterval(() => {
       const randomidx = Math.floor(Math.random() * placeholders.length)
       const randomPlaceholder = placeholders[randomidx]
-      // if(activeNav1){
+      if(activeNav1){
         setPlaceholder(randomPlaceholder)
-      // } else{
-        // if(placeholder.length >= 7){
-          // setPlaceholder(randomPlaceholder.slice(0, 7).trim() + "...")
-        // }
-      // }
-    }, 2000);
-
-    if(!activeNav1 && placeholder.length >= 7){
-      setPlaceholder(placeholder.slice(0, 7).trim() + "...")
-    } else{
-      return;
-    }
-
+      } else{
+        if(placeholder.length >= 7){
+          setPlaceholder(randomPlaceholder.slice(0, 7).trim() + "...")
+        }
+      }
+    }, 10000);
     return () => clearInterval(intervalId)
   }, [activeNav1])
 
