@@ -45,8 +45,7 @@ I used the tech stack above to make my react project simple
 ## Demo
 
 <div align="center">
-    <img src="src/assets/desktopScreenshot.jpg" alt="Desktop Screenshot">
-    <img src="src/assets/mobileScreenshots.jpg" alt="Mobile Screenshot">
+    <img src="src/assets/screenshot.jpg" alt="Desktop Screenshot">
 </div>
 
 **[Demo Link]()**
